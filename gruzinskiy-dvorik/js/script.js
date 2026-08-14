@@ -68,47 +68,4 @@
     revealItems.forEach(el => el.classList.add('in-view'));
     vineDividers.forEach(el => el.classList.add('in-view'));
   }
-
-  /* ---------- booking form validation (demo, no backend) ---------- */
-  const form = document.getElementById('bookingForm');
-  const successMsg = document.getElementById('formSuccess');
-
-  if (form) {
-    const dateInput = form.querySelector('#fDate');
-    if (dateInput) {
-      const today = new Date().toISOString().split('T')[0];
-      dateInput.min = today;
-    }
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      successMsg.classList.remove('is-visible');
-
-      let isValid = true;
-      const fields = form.querySelectorAll('.form-row input[required], .form-row textarea[required]');
-
-      fields.forEach(field => {
-        const row = field.closest('.form-row');
-        const fieldValid = field.checkValidity();
-        row.classList.toggle('is-invalid', !fieldValid);
-        if (!fieldValid) isValid = false;
-      });
-
-      if (!isValid) {
-        form.querySelector('.form-row.is-invalid input, .form-row.is-invalid textarea')?.focus();
-        return;
-      }
-
-      successMsg.classList.add('is-visible');
-      form.reset();
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-
-    form.querySelectorAll('input, textarea').forEach(field => {
-      field.addEventListener('input', () => {
-        const row = field.closest('.form-row');
-        if (field.checkValidity()) row.classList.remove('is-invalid');
-      });
-    });
-  }
 })();
