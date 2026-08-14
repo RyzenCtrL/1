@@ -1,0 +1,61 @@
+/* ============================================================
+   THEME TOKENS — единственное, что меняется при переносе шаблона
+   на другой бизнес с готовой айдентикой (кроме content.js).
+
+   Палитра — не буквальные цвета интерьера (розовый/мятный), а
+   осознанный "апгрейд" в премиальный тёмный регистр, по референсу
+   заказчика (тёмный фон + сдержанный тёплый акцент, без "цыганского
+   золота"). Coral/teal — отсылка к реальному бренду (лосось, авокадо,
+   бирюзовая вывеска "Hawaii Mood"), но приглушённые и не аляповатые.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root{
+  /* --- цвет --- */
+  --ink:        #15171A;   /* тёмный фон — вместо чёрного, чуть тёплый уголь */
+  --ink-soft:   #1E2126;   /* вторичный тёмный фон / карточки на тёмном */
+  --paper:      #F5F0E6;   /* тёплый светлый фон вместо чистого белого */
+  --paper-dim:  #EAE2CF;   /* приглушённая подложка карточек на светлом */
+  --coral:      #FF6B4A;   /* лосось / гуава — главный акцент вместо золота */
+  --coral-soft: #FFA487;   /* светлый блик акцента */
+  --teal:       #2FB6A6;   /* бирюзовая вывеска заведения — вторичный акцент */
+  --teal-deep:  #1C7B70;   /* тень бирюзы / бордер на светлом */
+  --pink:       #E3538F;   /* фирменная розовая стена — используем скупо */
+
+  --line-on-paper: rgba(21,23,26,.13);
+  --line-on-ink:   rgba(245,240,230,.14);
+
+  --text-on-paper:      #201C16;
+  --text-on-paper-dim:  #5A5347;
+  --text-on-ink:        #F5F0E6;
+  --text-on-ink-dim:    #C4BEB2;
+
+  /* --- типографика --- */
+  --font-display: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-body:    'Manrope', system-ui, -apple-system, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+
+  /* --- форма --- */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-card: 0 24px 48px -28px rgba(15,12,9,.6);
+  --shadow-pop:  0 10px 24px -12px rgba(15,12,9,.4);
+
+  /* --- ритм отступов, 8pt --- */
+  --sp-1: 8px;
+  --sp-2: 12px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+  --sp-6: 48px;
+  --sp-7: 64px;
+  --sp-8: 96px;
+
+  --container: 1140px;
+  --ease-out: cubic-bezier(.16,1,.3,1);
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
