@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Загрузка…</title>
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- переиспользуемая SVG-геометрия: мягкий "боул"-край вместо прямых углов у фото -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="live-edge" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.04 C0.05,0.01 0.1,0.06 0.16,0.025 C0.23,0 0.3,0.05 0.37,0.02 C0.45,0 0.52,0.045 0.6,0.015 C0.68,0 0.76,0.04 0.85,0.01 C0.9,0 0.95,0.03 1,0.015 L1,1 L0,1 Z"/>
+    </clipPath>
+    <clipPath id="live-edge-soft" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.025 C0.1,0.05 0.2,0.005 0.3,0.03 C0.42,0.06 0.55,0.005 0.68,0.03 C0.8,0.055 0.9,0.008 1,0.025 L1,1 L0,1 Z"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<header id="site-header" class="header"></header>
+
+<main id="main">
+  <section id="hero" class="hero"></section>
+  <div id="marquee" class="marquee"></div>
+  <section id="amenities" class="amenities"></section>
+  <section id="constructor" class="constructor"></section>
+  <section id="menu" class="menu"></section>
+  <section id="gallery" class="gallery"></section>
+  <section id="reviews" class="reviews"></section>
+  <section id="location" class="location"></section>
+</main>
+
+<footer id="site-footer" class="footer"></footer>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
