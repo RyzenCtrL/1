@@ -4,7 +4,7 @@
    ============================================================ */
 
 *, *::before, *::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 body{
   margin:0;
   background: var(--paper);
@@ -13,6 +13,8 @@ body{
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 img{ max-width:100%; display:block; }
 
@@ -123,10 +125,12 @@ button{ font: inherit; color: inherit; background: none; border: none; }
 }
 .header-inner{
   max-width: var(--container); margin-inline:auto; padding: var(--sp-2) var(--sp-4);
-  display:flex; align-items:center; gap: var(--sp-4);
+  display:flex; flex-wrap:wrap; align-items:center; gap: var(--sp-2) var(--sp-4);
 }
-@media (min-width:768px){ .header-inner{ padding: var(--sp-3) var(--sp-6); } }
-.brand{ display:flex; align-items:center; gap:12px; text-decoration:none; margin-right:auto; }
+@media (min-width:768px){ .header-inner{ padding: var(--sp-3) var(--sp-6); flex-wrap:nowrap; } }
+.brand{ display:flex; align-items:center; gap:12px; text-decoration:none; margin-right:auto; min-width:0; }
+.brand-word{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.status-pill{ max-width:100%; }
 .brand img{ width:38px; height:38px; border-radius: 9px; object-fit:contain; }
 .brand-word{ font-family: var(--font-display); font-weight:600; font-style:italic; font-size:21px; letter-spacing: -.01em; }
 .nav-links{ display:none; gap: var(--sp-5); list-style:none; margin:0; padding:0; font-size:14.5px; }
