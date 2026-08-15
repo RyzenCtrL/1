@@ -144,7 +144,7 @@ input,textarea{ font:inherit; }
   padding:12px 0;
   box-shadow:0 8px 30px -12px rgba(0,0,0,.4);
 }
-.header-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.header-inner{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px 16px; }
 
 .brand{ display:flex; align-items:center; gap:10px; color:var(--white); flex-shrink:0; }
 .brand-mark{ color:var(--gold); flex-shrink:0; }
@@ -560,10 +560,15 @@ input,textarea{ font:inherit; }
 
 @media (max-width: 540px){
   .wrap{ padding:0 20px; }
-  .hero{ padding-bottom:70px; }
+  .hero{ align-items:flex-start; padding-top:140px; padding-bottom:56px; }
   .hero-cta{ flex-direction:column; align-items:stretch; }
   .hero-cta .btn{ width:100%; }
   .menu-grid{ grid-template-columns:1fr; }
   .gallery-grid{ grid-template-columns:1fr 1fr; grid-auto-rows:130px; }
   .about-stats{ grid-template-columns:repeat(2,1fr); }
+
+  .brand-text{ font-size:.9rem; }
+  .header-actions{ gap:8px; }
+  .header-actions .btn-sm{ padding:.55em .95em; font-size:.76rem; }
+  .nav-toggle{ width:22px; }
 }
